@@ -37,8 +37,21 @@ Table of Content:
 17/ footer
 
 =====================================================================*/
-/* Mixins */
+/*Import Custom fonts */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Roboto:300,400,500,700");
+@font-face {
+  font-family: 'Noto Sans Malayalam';
+  src: url("../fonts/custom-fonts/noto-sans/NotoSansMalayalamUI-Bold.eot");
+  src: url("../fonts/custom-fonts/noto-sans/NotoSansMalayalamUI-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/custom-fonts/noto-sans/NotoSansMalayalamUI-Bold.woff2") format("woff2"), url("../fonts/custom-fonts/noto-sans/NotoSansMalayalamUI-Bold.woff") format("woff"), url("../fonts/custom-fonts/noto-sans/NotoSansMalayalamUI-Bold.ttf") format("truetype"), url("../fonts/custom-fonts/noto-sans/NotoSansMalayalamUI-Bold.svg#NotoSansMalayalamUI-Bold") format("svg");
+  font-weight: 700;
+  font-style: normal; }
+@font-face {
+  font-family: 'Noto Sans Malayalam';
+  src: url("../fonts/custom-fonts/noto-sans/NotoSansMalayalam.eot");
+  src: url("../fonts/custom-fonts/noto-sans/NotoSansMalayalam.eot?#iefix") format("embedded-opentype"), url("../fonts/custom-fonts/noto-sans/NotoSansMalayalam.woff2") format("woff2"), url("../fonts/custom-fonts/noto-sans/NotoSansMalayalam.woff") format("woff"), url("../fonts/custom-fonts/noto-sans/NotoSansMalayalam.ttf") format("truetype"), url("../fonts/custom-fonts/noto-sans/NotoSansMalayalam.svg#NotoSansMalayalam") format("svg");
+  font-weight: 400;
+  font-style: normal; }
+/* Mixins */
 /*----------------------------------------------------*/
 /*font Variables*/
 /*Color Variables*/
@@ -60,15 +73,24 @@ a {
 .row.m0 {
   margin: 0px; }
 
+::-moz-selection {
+  /* Code for Firefox */
+  color: #fff;
+  background: #000; }
+
+::selection {
+  color: #fff;
+  background: #000; }
+
 body {
   line-height: 24px;
   font-size: 14px;
-  font-family: "Roboto", sans-serif;
   font-weight: normal;
-  color: #777777; }
+  color: #777777;
+  font-family: "Roboto", sans-serif, Noto Sans Malayalam, sans-serif; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Roboto", sans-serif;
+  /*font-family: $rob; */
   font-weight: 500; }
 
 button:focus {
@@ -1123,7 +1145,7 @@ button:focus {
   margin-top: 40px; }
   .main_blog_details .news_d_footer a {
     font-size: 14px;
-    font-family: "Open Sans", sans-serif;
+    /*font-family: $open;*/
     color: #777777; }
     .main_blog_details .news_d_footer a i {
       padding-right: 8px; }
@@ -2621,9 +2643,9 @@ h6 {
     margin-top: 20px; }
     .choice_item .choice_text h4 {
       font-size: 18px;
-      line-height: 27px;
+      line-height: 24px;
       color: #222222;
-      font-family: "Roboto", sans-serif;
+      /*font-family: $rob;*/
       font-weight: 500;
       margin-bottom: 15px;
       transition: all 300ms linear 0s; }
@@ -2631,14 +2653,25 @@ h6 {
         color: #ff1857; }
     .choice_item .choice_text p {
       margin-bottom: 0px; }
+    .choice_item .choice_text .date {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      align-items: center; }
 
 .choice_text {
   margin-top: 20px; }
   .choice_text h4 {
     font-size: 18px;
-    line-height: 27px;
+    line-height: 24px;
     color: #222222;
-    font-family: "Roboto", sans-serif;
+    /*font-family: $rob;*/
     font-weight: 500;
     margin-bottom: 15px;
     transition: all 300ms linear 0s; }
@@ -2649,12 +2682,13 @@ h6 {
 
 .small .choice_text h4 {
   font-size: 14px;
-  line-height: 24px; }
+  line-height: 19px; }
 
 .date {
   margin-bottom: 15px; }
   .date .gad_btn {
-    color: #fff; }
+    color: #fff;
+    padding: 4px 12px; }
   .date a {
     color: #777777;
     font-size: 13px;
@@ -2854,14 +2888,14 @@ h6 {
     margin-top: 0px; }
     .product_list .media .media-body .choice_text h4 {
       font-size: 14px;
-      line-height: 22px;
+      line-height: 19px;
       margin-bottom: 10px; }
     .product_list .media .media-body .choice_text .date {
       margin-bottom: 0px; }
       .product_list .media .media-body .choice_text .date a {
-        margin: 0px; }
+        margin: 0px 10px 0 0; }
         .product_list .media .media-body .choice_text .date a:last-child {
-          float: right; }
+          /*float: right;*/ }
 
 /* End Product List Area css
 ============================================================================================ */

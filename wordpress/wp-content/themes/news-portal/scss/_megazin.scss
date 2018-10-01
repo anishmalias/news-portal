@@ -10,9 +10,9 @@
 		
 		h4{
 			font-size: 18px;
-			line-height: 27px;
+			line-height: 24px;
 			color: $dip;
-			font-family: $rob;
+			/*font-family: $rob;*/
 			font-weight: 500;
 			margin-bottom: 15px;
 			@include transition;
@@ -23,6 +23,10 @@
 		p{
 			margin-bottom: 0px;	
 		}
+		.date{
+			@include flexboxv2();
+			@include align-itemsv2(center);
+		}
 	}
 }
 .choice_text{
@@ -30,9 +34,9 @@
 
 	h4{
 		font-size: 18px;
-		line-height: 27px;
+		line-height: 24px;
 		color: $dip;
-		font-family: $rob;
+		/*font-family: $rob;*/
 		font-weight: 500;
 		margin-bottom: 15px;
 		@include transition;
@@ -48,7 +52,7 @@
 	.choice_text{
 		h4{
 			font-size: 14px;
-			line-height: 24px;
+			line-height: 19px;
 		}
 	}
 }
@@ -56,6 +60,7 @@
 	margin-bottom: 15px;
 	.gad_btn{
 		color: #fff;
+		padding: 4px 12px;
 	}
 	a{
 		color: $pfont;
@@ -319,15 +324,15 @@
 				margin-top: 0px;
 				h4{
 					font-size: 14px;
-					line-height: 22px;
+					line-height: 19px;
 					margin-bottom: 10px;
 				}
 				.date{
 					margin-bottom: 0px;
 					a{
-						margin: 0px;
+						margin: 0px 10px 0 0;
 						&:last-child{
-							float: right;
+							/*float: right;*/
 						}
 					}
 				}

@@ -4,7 +4,7 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
 <head>
-<meta charset="<?php bloginfo('charset'); ?>">
+<meta charset="<?php bloginfo('charset'); ?>"> 
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="google-site-verification" content="8UeiofC42IIbyMF26po9sm_teSV9oqaUuuZbLsW21z4" />
 <title><?php bloginfo('name'); { echo ' | '; } if(wp_title('', false)) {} else { echo bloginfo('description'); }wp_title(''); ?></title>
@@ -28,7 +28,7 @@
 <!-- main css -->
 <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/css/style.css">
 <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/css/responsive.css">
-
+</head>
 <body>
         
         <!--================Header Menu Area =================-->

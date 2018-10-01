@@ -18,8 +18,8 @@
 											<a href="#"><i class="far fa-calendar"></i>March 14, 2018</a>
 											<a href="#"><i class="far fa-comment-alt" aria-hidden="true"></i>05</a>
 										</div>
-										<a href="news-details.html"><h4>DFacts Why Inkjet Printing Is Very Appealing Compared To Ordinary Printing</h4></a>
-										<p>Having a baby can be a nerve wracking experience for new parents not the nine months of pregnancy, I’m talking about</p>
+										<a href="news-details.html"><h4>വ്യാപാര ചർച്ചകള്‍ ഉടൻ തുടങ്ങണമെന്ന് അവർ ആവശ്യപ്പെട്ടു: ഇന്ത്യയിൽ കണ്ണുനട്ട് ട്രംപ്...</h4></a>
+										<p>വ്യാപാര ചർച്ചകള്‍ ഉടൻ തുടങ്ങണമെന്ന് അവർ ആവശ്യപ്പെട്ടു: ഇന്ത്യയിൽ കണ്ണുനട്ട് ട്രംപ്...വ്യാപാര ചർച്ചകള്‍ ഉടൻ തുടങ്ങണമെന്ന് അവർ ആവശ്യപ്പെട്ടു: ഇന്ത്യയിൽ കണ്ണുനട്ട് ട്രംപ്...</p>
 									</div>
         						</div>
         					</div>

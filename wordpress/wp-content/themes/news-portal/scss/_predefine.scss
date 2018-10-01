@@ -15,16 +15,25 @@ a{
 .row.m0{
     margin: 0px;
 }
+::-moz-selection { /* Code for Firefox */
+    color: $white;
+    background: $black; 
+}
 
+::selection {
+    color: $white;
+    background: $black;
+}
 body{
     line-height: 24px;
     font-size: 14px;
-    font-family: $rob;
     font-weight: normal;
     color: $pfont;
+
+    font-family: $rob, $malayalam, sans-serif;
 }
 h1, h2, h3, h4, h5, h6{ 
-    font-family: $rob; 
+    /*font-family: $rob; */
     font-weight: 500;
 }
 
