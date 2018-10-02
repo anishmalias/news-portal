@@ -7,70 +7,60 @@
 							<h2>Latest News</h2>
 						</div>
         				<div class="latest_news">
+							<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+							$args = array( 'post_type' => 'post', 'posts_per_page' => 5, 'paged' => $paged );
+							$wp_query = new WP_Query($args);
+							while ( have_posts() ) : the_post(); ?>
         					<div class="media">
-        						<div class="d-flex">
-        							<img class="img-fluid" src="<?php bloginfo('template_directory'); ?>/img/blog/l-news/l-news-1.jpg" alt="">
+        						<div class="d-flex cp-l-latest__thumb">
+        							<a href="<?php the_permalink(); ?>">
+	                                	<?php if ( has_post_thumbnail($post->ID) ) {
+		                                    $thumb_id = get_post_thumbnail_id();
+		                                    $thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true);                                
+	                                    ?>
+                                    	<img class="img-fluid" src="<?php echo $thumb_url[0]; ?>" alt="<?php the_title(); ?>" />
+
+                               			<?php } else { ?>
+                                    		<img src="<?php bloginfo('template_directory'); ?>/img/default-image.png" alt="<?php the_title(); ?>" />
+                                		<?php } ?> 
+                                	</a>
         						</div>
         						<div class="media-body">
         							<div class="choice_text">
 										<div class="date">
 											<a class="gad_btn" href="#">Gadgets</a>
-											<a href="#"><i class="far fa-calendar"></i>March 14, 2018</a>
-											<a href="#"><i class="far fa-comment-alt" aria-hidden="true"></i>05</a>
+											<a href="#"><i class="far fa-calendar"></i><?php the_time('M j\<\s\u\p\>S\<\/\s\u\p\>, Y') ?></a>
+											<a href="#"><i class="far fa-comment-alt" aria-hidden="true"></i>
+												<?php
+	                                                if($post->comment_count > 0) { 
+
+	                                                echo '';
+
+	                                                comments_popup_link('', '1 ', '% '); 
+
+	                                                }else if($post->comment_count == 0) {
+	                                                    echo '0';
+	                                                } 
+	                                            ?>
+											</a>
 										</div>
-										<a href="news-details.html"><h4>വ്യാപാര ചർച്ചകള്‍ ഉടൻ തുടങ്ങണമെന്ന് അവർ ആവശ്യപ്പെട്ടു: ഇന്ത്യയിൽ കണ്ണുനട്ട് ട്രംപ്...</h4></a>
-										<p>വ്യാപാര ചർച്ചകള്‍ ഉടൻ തുടങ്ങണമെന്ന് അവർ ആവശ്യപ്പെട്ടു: ഇന്ത്യയിൽ കണ്ണുനട്ട് ട്രംപ്...വ്യാപാര ചർച്ചകള്‍ ഉടൻ തുടങ്ങണമെന്ന് അവർ ആവശ്യപ്പെട്ടു: ഇന്ത്യയിൽ കണ്ണുനട്ട് ട്രംപ്...</p>
+										<a href="<?php the_permalink(); ?>"><h4> <?php the_title() ?></h4></a>
+										<!-- <?php $content = get_the_content();
+                                        	$trimmed_content = wp_trim_words( $content, 60 ); 
+                                        ?> -->
+                                        <?php 
+											$content = get_the_content();
+											$content = preg_replace("/<img[^>]+\>/i", "", $content); 		
+											$content = preg_replace("/<iframe[^>]+\>/i", "", $content);             
+											$content = apply_filters('the_content', $content);
+											$content = str_replace(']]>', ']]>', $content);
+											$trimmed_content = wp_trim_words( $content, 22 ); 
+											echo $trimmed_content;
+                                        ?>
 									</div>
         						</div>
         					</div>
-        					<div class="media">
-        						<div class="d-flex">
-        							<img class="img-fluid" src="<?php bloginfo('template_directory'); ?>/img/blog/l-news/l-news-2.jpg" alt="">
-        						</div>
-        						<div class="media-body">
-        							<div class="choice_text">
-										<div class="date">
-											<a class="gad_btn" href="#">Gadgets</a>
-											<a href="#"><i class="far fa-calendar"></i>March 14, 2018</a>
-											<a href="#"><i class="far fa-comment-alt" aria-hidden="true"></i>05</a>
-										</div>
-										<a href="news-details.html"><h4>DFacts Why Inkjet Printing Is Very Appealing Compared To Ordinary Printing</h4></a>
-										<p>Having a baby can be a nerve wracking experience for new parents not the nine months of pregnancy, I’m talking about</p>
-									</div>
-        						</div>
-        					</div>
-        					<div class="media">
-        						<div class="d-flex">
-        							<img class="img-fluid" src="<?php bloginfo('template_directory'); ?>/img/blog/l-news/l-news-3.jpg" alt="">
-        						</div>
-        						<div class="media-body">
-        							<div class="choice_text">
-										<div class="date">
-											<a class="gad_btn" href="#">Gadgets</a>
-											<a href="#"><i class="far fa-calendar"></i>March 14, 2018</a>
-											<a href="#"><i class="far fa-comment-alt" aria-hidden="true"></i>05</a>
-										</div>
-										<a href="news-details.html"><h4>DFacts Why Inkjet Printing Is Very Appealing Compared To Ordinary Printing</h4></a>
-										<p>Having a baby can be a nerve wracking experience for new parents not the nine months of pregnancy, I’m talking about</p>
-									</div>
-        						</div>
-        					</div>
-        					<div class="media">
-        						<div class="d-flex">
-        							<img class="img-fluid" src="<?php bloginfo('template_directory'); ?>/img/blog/l-news/l-news-4.jpg" alt="">
-        						</div>
-        						<div class="media-body">
-        							<div class="choice_text">
-										<div class="date">
-											<a class="gad_btn" href="#">Gadgets</a>
-											<a href="#"><i class="far fa-calendar"></i>March 14, 2018</a>
-											<a href="#"><i class="far fa-comment-alt" aria-hidden="true"></i>05</a>
-										</div>
-										<a href="news-details.html"><h4>DFacts Why Inkjet Printing Is Very Appealing Compared To Ordinary Printing</h4></a>
-										<p>Having a baby can be a nerve wracking experience for new parents not the nine months of pregnancy, I’m talking about</p>
-									</div>
-        						</div>
-        					</div>
+        					<?php endwhile; ?>
         				</div>
         				<div class="tavel_food mt-100">
         					<div class="main_title2">

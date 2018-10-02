@@ -96,6 +96,11 @@
 		.d-flex{
 			padding-right: 30px;
 		}
+		.cp-l-latest__thumb{
+			width: 300px;
+
+			@include flexv2(0,0,300px);
+		}
 		.media-body{
 			
 		}

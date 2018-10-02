@@ -93,6 +93,10 @@ h1, h2, h3, h4, h5, h6 {
   /*font-family: $rob; */
   font-weight: 500; }
 
+img {
+  max-width: 100%;
+  height: auto; }
+
 button:focus {
   outline: none;
   box-shadow: none; }
@@ -225,23 +229,31 @@ button:focus {
     width: 100%; }
   .main_menu .navbar .navbar-brand {
     display: none; }
-  .main_menu .navbar .nav {
-    padding-left: 20px; }
-    .main_menu .navbar .nav .nav-item {
-      margin-right: 45px; }
-      .main_menu .navbar .nav .nav-item .nav-link {
+  .main_menu .navbar .menu {
+    margin: 0;
+    padding: 0 0 0 20px;
+    list-style: none;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    .main_menu .navbar .menu .menu-item {
+      margin-right: 45px;
+      list-style: none; }
+      .main_menu .navbar .menu .menu-item a {
         font: 500 12px/60px "Roboto", sans-serif;
         text-transform: uppercase;
         color: #222222;
         padding: 0px;
         display: inline-block; }
-        .main_menu .navbar .nav .nav-item .nav-link:after {
+        .main_menu .navbar .menu .menu-item a:after {
           display: none; }
-      .main_menu .navbar .nav .nav-item:hover .nav-link, .main_menu .navbar .nav .nav-item.active .nav-link {
+      .main_menu .navbar .menu .menu-item:hover a, .main_menu .navbar .menu .menu-item.current-menu-item a {
         color: #ff1857; }
-      .main_menu .navbar .nav .nav-item.submenu {
+      .main_menu .navbar .menu .menu-item.submenu {
         position: relative; }
-        .main_menu .navbar .nav .nav-item.submenu ul {
+        .main_menu .navbar .menu .menu-item.submenu ul {
           border: none;
           padding: 0px;
           border-radius: 0px;
@@ -249,7 +261,7 @@ button:focus {
           margin: 0px;
           background: #fff; }
           @media (min-width: 992px) {
-            .main_menu .navbar .nav .nav-item.submenu ul {
+            .main_menu .navbar .menu .menu-item.submenu ul {
               position: absolute;
               top: 120%;
               left: 0px;
@@ -262,7 +274,7 @@ button:focus {
               border: none;
               padding: 0px;
               border-radius: 0px; } }
-          .main_menu .navbar .nav .nav-item.submenu ul:before {
+          .main_menu .navbar .menu .menu-item.submenu ul:before {
             content: "";
             width: 0;
             height: 0;
@@ -275,33 +287,33 @@ button:focus {
             z-index: 3;
             opacity: 0;
             transition: all 400ms linear; }
-          .main_menu .navbar .nav .nav-item.submenu ul .nav-item {
+          .main_menu .navbar .menu .menu-item.submenu ul .nav-item {
             display: block;
             float: none;
             margin-right: 0px;
             border-bottom: 1px solid #ededed;
             margin-left: 0px;
             transition: all 0.4s linear; }
-            .main_menu .navbar .nav .nav-item.submenu ul .nav-item .nav-link {
+            .main_menu .navbar .menu .menu-item.submenu ul .nav-item .nav-link {
               line-height: 45px;
               color: #222222;
               padding: 0px 30px;
               transition: all 150ms linear;
               display: block;
               margin-right: 0px; }
-            .main_menu .navbar .nav .nav-item.submenu ul .nav-item:last-child {
+            .main_menu .navbar .menu .menu-item.submenu ul .nav-item:last-child {
               border-bottom: none; }
-            .main_menu .navbar .nav .nav-item.submenu ul .nav-item:hover .nav-link {
+            .main_menu .navbar .menu .menu-item.submenu ul .nav-item:hover .nav-link {
               background: #ff1857;
               color: #fff; }
         @media (min-width: 992px) {
-          .main_menu .navbar .nav .nav-item.submenu:hover ul {
+          .main_menu .navbar .menu .menu-item.submenu:hover ul {
             visibility: visible;
             opacity: 1;
             top: 100%; } }
-        .main_menu .navbar .nav .nav-item.submenu:hover ul .nav-item {
+        .main_menu .navbar .menu .menu-item.submenu:hover ul .nav-item {
           margin-top: 0px; }
-      .main_menu .navbar .nav .nav-item:last-child {
+      .main_menu .navbar .menu .menu-item:last-child {
         margin-right: 0px; }
   .main_menu .navbar .search {
     font-size: 12px;
@@ -1126,12 +1138,12 @@ button:focus {
   font-size: 14px;
   color: #777777;
   margin-bottom: 15px; }
-.main_blog_details .blockquote {
-  background: #fff;
+.main_blog_details blockquote {
+  /*background: #fff;
   padding: 30px;
-  box-shadow: -20.84px 21.58px 30px 0px rgba(176, 176, 176, 0.1);
+  box-shadow: -20.84px 21.58px 30px 0px rgba(176, 176, 176, 0.1);*/
   margin: 35px 0px; }
-  .main_blog_details .blockquote p {
+  .main_blog_details blockquote p {
     background: #f9f9ff;
     margin-bottom: 0px;
     border-left: 2px solid #ff1857;
@@ -2720,6 +2732,14 @@ h6 {
   margin-bottom: 30px; }
   .latest_news .media .d-flex {
     padding-right: 30px; }
+  .latest_news .media .cp-l-latest__thumb {
+    width: 300px;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 300px;
+    -moz-box-flex: 0;
+    -moz-flex: 0 0 300px;
+    -ms-flex: 0 0 300px;
+    flex: 0 0 300px; }
   .latest_news .media:last-child {
     margin-bottom: 0px; }
 

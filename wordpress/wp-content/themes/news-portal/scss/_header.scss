@@ -85,11 +85,18 @@
 		.navbar-brand{
 			display: none;
 		}
-        .nav{
-			padding-left: 20px;
-            .nav-item{
+        .menu{
+            margin: 0;
+			padding: 0 0 0 20px;
+            list-style: none;
+
+            @include flexboxv2();
+
+            .menu-item{
 				margin-right: 45px;
-                .nav-link{
+                list-style: none;
+
+                a{
                     font: 500 12px/60px $rob;
                     text-transform: uppercase;
                     color: $dip;
@@ -99,8 +106,8 @@
                         display: none;
                     }
                 }
-                &:hover, &.active{
-                    .nav-link{
+                &:hover, &.current-menu-item{
+                    a{
                         color: $baseColor;
                     }
                 }
