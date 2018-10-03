@@ -26,7 +26,7 @@
                                 	</a>
         						</div>
         						<div class="media-body">
-        							<div class="choice_text">
+        							<div class="choice_text mt-0">
 										<div class="date">
 											<?php foreach((get_the_category()) as $category): ?> 		
 												<a class="gad_btn" href="<?php echo get_category_link($category->cat_ID); ?>" title="<?php echo $category->cat_name ?>"><?php echo $category->cat_name ?></a>

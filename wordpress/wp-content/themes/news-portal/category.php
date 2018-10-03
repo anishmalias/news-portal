@@ -9,10 +9,6 @@ if ( have_posts() ) : ?>
         <div class="container">
             <div class="banner_content text-center">
                 <h2><?php single_cat_title(); ?></h2>
-                <div class="page_link">
-                    <a href="index.html">Home</a>
-                    <a href="news-details.html">News Details</a>
-                </div>
             </div>
         </div>
     </div>
