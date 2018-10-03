@@ -487,6 +487,9 @@
             ]
         });
     }
-	
+    
+    // enable bootstrap tooltip
+    
+    $('[data-toggle="tooltip"]').tooltip();
 
 })(jQuery)

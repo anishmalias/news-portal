@@ -92,6 +92,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="<?php echo get_bloginfo('template_directory'); ?>/js/jquery-3.2.1.min.js"></script>
         <script src="<?php echo get_bloginfo('template_directory'); ?>/js/popper.js"></script>
+        <script src="<?php echo get_bloginfo('template_directory'); ?>/vendors/jquery-ui/jquery-ui.js"></script>
         <script src="<?php echo get_bloginfo('template_directory'); ?>/js/bootstrap.min.js"></script>
         <script src="<?php echo get_bloginfo('template_directory'); ?>/js/stellar.js"></script>
         <script src="<?php echo get_bloginfo('template_directory'); ?>/vendors/lightbox/simpleLightbox.min.js"></script>
@@ -99,7 +100,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         <script src="<?php echo get_bloginfo('template_directory'); ?>/vendors/isotope/imagesloaded.pkgd.min.js"></script>
         <script src="<?php echo get_bloginfo('template_directory'); ?>/vendors/isotope/isotope-min.js"></script>
         <script src="<?php echo get_bloginfo('template_directory'); ?>/vendors/owl-carousel/owl.carousel.min.js"></script>
-        <script src="<?php echo get_bloginfo('template_directory'); ?>/vendors/jquery-ui/jquery-ui.js"></script>
+        
         <script src="<?php echo get_bloginfo('template_directory'); ?>/js/jquery.ajaxchimp.min.js"></script>
         <script src="<?php echo get_bloginfo('template_directory'); ?>/js/mail-script.js"></script>
         <script src="<?php echo get_bloginfo('template_directory'); ?>/js/theme.js"></script>
