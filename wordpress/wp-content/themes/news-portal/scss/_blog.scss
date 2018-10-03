@@ -694,6 +694,35 @@
     a {
         color: $dip;
     }
+    .commentlist{
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 0;
+
+        .children{
+            list-style: none;
+            padding: 48px 0 0 25px;
+            margin: 0px 0 0 0;
+        }
+
+        
+        .reply-btn{
+            .comment-reply-link{
+                background-color: #fff;
+                color: $dip;
+                border:1px solid #eee;
+                padding: 2px 18px;
+                font-size: 12px;
+                display: block;
+                font-weight:600;
+                @include transition();
+                &:hover {
+                    background-color: $baseColor;
+                    color: #fff;
+                }
+            }
+        }
+    }
     .comment-list {
         padding-bottom: 48px;
         &:last-child {
@@ -718,11 +747,15 @@
     }
     .thumb {
         margin-right: 20px;
+        width: 60px;
+
+        @include flexv2(0,0,60px);
     }
     .date {
         font-size: 13px;
         color: #cccccc;
         margin-bottom: 13px;
+        font-weight: 500;
     }
     .comment {
         color: #777777;
@@ -743,19 +776,35 @@
         }
     }
 }
-
+.comment-respond{
+    .comment-reply-title{
+        text-align: left;
+        margin-bottom: 50px;
+        font-size: 18px;
+        line-height: 22px;
+        color: $dip;
+    }
+    .comment-form{
+        margin: 0;
+        padding: 0;
+    }
+}
 .comment-form {
     background:#fff;
     text-align: left;
-    padding: 47px 30px 43px;
+    padding: 47px 30px 0px;
     margin-top: 50px;
-    margin-bottom: 40px;
+    margin-bottom: 00px;
     h4 {
         text-align: left;
         margin-bottom: 50px;
         font-size: 18px;
         line-height: 22px;
         color: $dip;
+    }
+    .comment-form{
+        margin: 0;
+        padding: 0;
     }
     .name {
         padding-left: 0px;
@@ -814,9 +863,10 @@
         font-size: 13px;
         color: #777;
     }
-	.submit_btn{
-		float: right;
-	}
+	.form-submit{
+        margin-bottom: 0;
+        text-align: right;
+    }
 }
 
 

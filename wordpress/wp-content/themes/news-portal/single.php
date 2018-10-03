@@ -10,10 +10,6 @@ get_header(); ?>
         <div class="container">
             <div class="banner_content text-center">
                 <h2>News Details</h2>
-                <div class="page_link">
-                    <a href="index.html">Home</a>
-                    <a href="news-details.html">News Details</a>
-                </div>
             </div>
         </div>
     </div>
@@ -50,16 +46,13 @@ get_header(); ?>
                                     <?php the_content(); ?>
                                 </div>
                                 <div class="news_d_footer">
-                                    <a class="" href="#">
+                                    <a class="" href="javascript:void(0);">
                                         <i class="far fa-comment-alt"></i>
                                         <span>
                                             <?php
                                                 if($post->comment_count > 0) { 
-
-                                                echo '';
-
-                                                comments_popup_link('', '1 ', '% '); 
-
+                                                    echo $post->comment_count;
+                                                    //comments_popup_link('', ' 1 ', '% '); 
                                                 }else if($post->comment_count == 0) {
                                                     echo '0';
                                                 } 
@@ -111,7 +104,7 @@ get_header(); ?>
                         </div>                                  
                     </div>
                 </div>
-                <div class="comments-area">
+                <div class="comment-wrap">
                     <?php comments_template(); ?>
                 </div>
             </div>

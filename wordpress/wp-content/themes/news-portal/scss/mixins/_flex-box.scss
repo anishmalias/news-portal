@@ -19,7 +19,7 @@
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flexbox;
-	display: flex;
+	display: flex; 
 }
 
 %flexbox { @include flexboxv2; }
