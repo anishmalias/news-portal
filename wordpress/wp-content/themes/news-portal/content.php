@@ -28,16 +28,15 @@
         						<div class="media-body">
         							<div class="choice_text">
 										<div class="date">
-											<a class="gad_btn" href="#">Gadgets</a>
+											<?php foreach((get_the_category()) as $category): ?> 		
+												<a class="gad_btn" href="<?php echo get_category_link($category->cat_ID); ?>" title="<?php echo $category->cat_name ?>"><?php echo $category->cat_name ?></a>
+											<?php endforeach; ?> 
+																						
 											<a href="#"><i class="far fa-calendar"></i><?php the_time('M j\<\s\u\p\>S\<\/\s\u\p\>, Y') ?></a>
 											<a href="#"><i class="far fa-comment-alt" aria-hidden="true"></i>
 												<?php
 	                                                if($post->comment_count > 0) { 
-
-	                                                echo '';
-
-	                                                comments_popup_link('', '1 ', '% '); 
-
+	                                                echo $post->comment_count;
 	                                                }else if($post->comment_count == 0) {
 	                                                    echo '0';
 	                                                } 
@@ -48,15 +47,17 @@
 										<!-- <?php $content = get_the_content();
                                         	$trimmed_content = wp_trim_words( $content, 60 ); 
                                         ?> -->
+										<p>
                                         <?php 
 											$content = get_the_content();
 											$content = preg_replace("/<img[^>]+\>/i", "", $content); 		
 											$content = preg_replace("/<iframe[^>]+\>/i", "", $content);             
 											$content = apply_filters('the_content', $content);
 											$content = str_replace(']]>', ']]>', $content);
-											$trimmed_content = wp_trim_words( $content, 22 ); 
+											$trimmed_content = wp_trim_words( $content, 15 ); 
 											echo $trimmed_content;
                                         ?>
+										</p>
 									</div>
         						</div>
         					</div>

@@ -51,7 +51,7 @@
             <div class="logo_part">
             	<div class="container">
             		<div class="float-left">
-						<a class="logo" href="#"><img src="<?php bloginfo('template_directory'); ?>/img/logo.png" alt=""></a>
+						<a class="logo" href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_directory'); ?>/img/logo.png" alt=""></a>
 					</div>
 					<div class="float-right">
 						<div class="header_magazin">
