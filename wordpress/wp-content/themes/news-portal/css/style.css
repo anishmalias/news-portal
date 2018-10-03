@@ -1125,11 +1125,15 @@ button:focus {
         margin-bottom: 0px;
         font-size: 14px;
         color: #222222;
-        margin-bottom: 5px; }
+        margin-bottom: 2px; }
+        .main_blog_details .user_details .float-right .media .media-body h5 a {
+          color: #222222; }
       .main_blog_details .user_details .float-right .media .media-body p {
         font-size: 12px;
         color: #777777;
-        margin-bottom: 0px; }
+        margin-bottom: 0px;
+        line-height: normal;
+        font-weight: 500; }
     .main_blog_details .user_details .float-right .media .d-flex {
       padding-left: 14px;
       vertical-align: middle;

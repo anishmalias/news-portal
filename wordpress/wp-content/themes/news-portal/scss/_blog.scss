@@ -868,12 +868,17 @@
 						margin-bottom: 0px;
 						font-size: 14px;
 						color: $dip;
-						margin-bottom: 5px;
+                        margin-bottom: 2px;
+                        a{
+                            color: $dip;
+                        }
 					}
 					p{
 						font-size: 12px;
 						color: $pfont;
-						margin-bottom: 0px;
+                        margin-bottom: 0px;
+                        line-height: normal;
+                        font-weight: 500;
 					}
 				}
 				.d-flex{
