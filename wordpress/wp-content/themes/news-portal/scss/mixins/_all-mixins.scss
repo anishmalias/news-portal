@@ -14,4 +14,10 @@
     -ms-transition:$transitionAll;
     -o-transition:$transitionAll;
   }
-  
+  @mixin boxShadow($shadow...){
+	box-shadow: $shadow;
+	-webkit-box-shadow: $shadow;
+	-moz-box-shadow: $shadow;
+	-ms-box-shadow: $shadow;
+	-o-box-shadow: $shadow;
+}

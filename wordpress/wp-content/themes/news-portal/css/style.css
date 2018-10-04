@@ -1236,6 +1236,22 @@ button:focus {
     .main_blog_details .news_d_footer .news_socail a:last-child {
       margin-right: 0px; }
 
+.author__avatar {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  margin: 0 auto;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  box-shadow: 0px 10px 41px 0px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0px 10px 41px 0px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 10px 41px 0px rgba(0, 0, 0, 0.4);
+  -ms-box-shadow: 0px 10px 41px 0px rgba(0, 0, 0, 0.4);
+  -o-box-shadow: 0px 10px 41px 0px rgba(0, 0, 0, 0.4); }
+
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 /* Reservation Form Area css

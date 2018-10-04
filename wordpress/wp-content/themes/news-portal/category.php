@@ -66,6 +66,9 @@ if ( have_posts() ) : ?>
             </div>
             <?php endwhile; ?>
         </div>
+        <div class="default-pagination">
+            <?php wpbeginner_numeric_posts_nav(); ?>
+        </div>
     </div>
 </section> 
 <?php endif; ?>

@@ -992,3 +992,12 @@
 	}
 }
 
+.author__avatar{
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    margin: 0 auto;
+
+    @include borderRadius(50%);
+    @include boxShadow(0px 10px 41px 0px rgba($black, 0.4));
+}
