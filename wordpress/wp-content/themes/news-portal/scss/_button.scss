@@ -97,6 +97,11 @@
 	font-size: 12px;
 	font-weight: 500;
 	font-family: $rob;
+
+	&:hover, &:focus{
+		color: #fff;
+		background: lighten($baseColor, 20%);
+	}
 }
 /* End Main Button Area css
 ============================================================================================ */

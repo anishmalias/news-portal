@@ -46,6 +46,7 @@ Table of Content:
 /* Mixins */
 
 @import "mixins/flex-box";
+@import "mixins/all-mixins";
 
 /*----------------------------------------------------*/
 @import "variables";
@@ -87,7 +88,7 @@ Table of Content:
 @import "footer";
 /*---------------------------------------------------- */
 
-
+@import "pagination"
 
 
 

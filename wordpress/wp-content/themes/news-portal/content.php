@@ -1,10 +1,11 @@
 <!--================News Area =================-->
-        <section class="news_area">
+        <section class="news_area p_120 pb-0">
         	<div class="container">
         		<div class="row">
         			<div class="col-lg-8">
         				<div class="main_title2">
 							<h2>Latest News</h2>
+							<a href="?page_id=40" class="gad_btn">View All</a>
 						</div>
         				<div class="latest_news">
 							<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -67,74 +68,36 @@
         					<div class="main_title2">
 								<h2>Travel and food</h2>
 							</div>
-       						<div class="row">
-       							<div class="col-lg-6">
-       								<div class="row choice_small_inner">
-       									<div class="col-lg-6 col-sm-6">
-       										<div class="choice_item small">
-												<img class="img-fluid" src="<?php bloginfo('template_directory'); ?>/img/blog/popular-post/pp-4.jpg" alt="">
-												<div class="choice_text">
-													<a href="news-details.html"><h4>Technical Support 10 with Dealing With</h4></a>
-													<div class="date">
-														<a href="#"><i class="far fa-calendar"></i>March 14, 2018</a>
-														<a href="#"><i class="far fa-comment-alt" aria-hidden="true"></i>05</a>
-													</div>
-												</div>
-											</div>
-       									</div>
-       									<div class="col-lg-6 col-sm-6">
-       										<div class="choice_item small">
-												<img class="img-fluid" src="<?php bloginfo('template_directory'); ?>/img/blog/popular-post/pp-5.jpg" alt="">
-												<div class="choice_text">
-													<a href="news-details.html"><h4>Technical Support 10 with Dealing With</h4></a>
-													<div class="date">
-														<a href="#"><i class="far fa-calendar"></i>March 14, 2018</a>
-														<a href="#"><i class="far fa-comment-alt" aria-hidden="true"></i>05</a>
-													</div>
-												</div>
-											</div>
-       									</div>
-       									<div class="col-lg-6 col-sm-6">
-       										<div class="choice_item small">
-												<img class="img-fluid" src="<?php bloginfo('template_directory'); ?>/img/blog/popular-post/pp-6.jpg" alt="">
-												<div class="choice_text">
-													<a href="news-details.html"><h4>Technical Support 10 with Dealing With</h4></a>
-													<div class="date">
-														<a href="#"><i class="far fa-calendar"></i>March 14, 2018</a>
-														<a href="#"><i class="far fa-comment-alt" aria-hidden="true"></i>05</a>
-													</div>
-												</div>
-											</div>
-       									</div>
-       									<div class="col-lg-6 col-sm-6">
-       										<div class="choice_item small">
-												<img class="img-fluid" src="<?php bloginfo('template_directory'); ?>/img/blog/popular-post/pp-7.jpg" alt="">
-												<div class="choice_text">
-													<a href="news-details.html"><h4>Technical Support 10 with Dealing With</h4></a>
-													<div class="date">
-														<a href="#"><i class="far fa-calendar"></i>March 14, 2018</a>
-														<a href="#"><i class="far fa-comment-alt" aria-hidden="true"></i>05</a>
-													</div>
-												</div>
-											</div>
-       									</div>
-       								</div>
-       							</div>
-       							<div class="col-lg-6">
-       								<div class="choice_item">
-										<img class="img-fluid" src="<?php bloginfo('template_directory'); ?>/img/blog/popular-post/pp-8.jpg" alt="">
+							<div class="row">
+        						<div class="col-sm-6">
+        							<div class="choice_item">
+										<img class="img-fluid" src="<?php bloginfo('template_directory'); ?>/img/blog/popular-post/pp-9.jpg" alt="">
 										<div class="choice_text">
 											<div class="date">
 												<a class="gad_btn" href="#">Gadgets</a>
 												<a href="#"><i class="far fa-calendar"></i>>March 14, 2018</a>
 												<a href="#"><i class="far fa-comment-alt" aria-hidden="true"></i>05</a>
 											</div>
-											<a href="news-details.html"><h4>Dealing With Technical Support with 10 Useful Tips</h4></a>
+											<a href="news-details.html"><h4>Technical Support 10 with Dealing With</h4></a>
 											<p>It won’t be a bigger problem to find one video game lover in your neighbor. Since the introduction of Virtual Game, it has been achieving great heights</p>
 										</div>
 									</div>
-       							</div>
-       						</div>
+        						</div>
+        						<div class="col-sm-6">
+        							<div class="choice_item">
+										<img class="img-fluid" src="<?php bloginfo('template_directory'); ?>/img/blog/popular-post/pp-10.jpg" alt="">
+										<div class="choice_text">
+											<div class="date">
+												<a class="gad_btn" href="#">Gadgets</a>
+												<a href="#"><i class="far fa-calendar"></i>>March 14, 2018</a>
+												<a href="#"><i class="far fa-comment-alt" aria-hidden="true"></i>05</a>
+											</div>
+											<a href="news-details.html"><h4>Technical Support 10 with Dealing With</h4></a>
+											<p>It won’t be a bigger problem to find one video game lover in your neighbor. Since the introduction of Virtual Game, it has been achieving great heights</p>
+										</div>
+									</div>
+        						</div>
+        					</div>
         				</div>
         				<div class="wedding_megazin mt-100">
         					<div class="main_title2">
@@ -166,54 +129,6 @@
 											</div>
 											<a href="news-details.html"><h4>Technical Support 10 with Dealing With</h4></a>
 											<p>It won’t be a bigger problem to find one video game lover in your neighbor. Since the introduction of Virtual Game, it has been achieving great heights</p>
-										</div>
-									</div>
-        						</div>
-        						<div class="col-lg-3 col-sm-6">
-        							<div class="choice_item small">
-										<img class="img-fluid" src="<?php bloginfo('template_directory'); ?>/img/blog/popular-post/pp-11.jpg" alt="">
-										<div class="choice_text">
-											<a href="news-details.html"><h4>Technical Support 10 with Dealing With</h4></a>
-											<div class="date">
-												<a href="#"><i class="far fa-calendar"></i>>March 14, 2018</a>
-												<a href="#"><i class="far fa-comment-alt" aria-hidden="true"></i>05</a>
-											</div>
-										</div>
-									</div>
-        						</div>
-        						<div class="col-lg-3 col-sm-6">
-        							<div class="choice_item small">
-										<img class="img-fluid" src="<?php bloginfo('template_directory'); ?>/img/blog/popular-post/pp-12.jpg" alt="">
-										<div class="choice_text">
-											<a href="news-details.html"><h4>Technical Support 10 with Dealing With</h4></a>
-											<div class="date">
-												<a href="#"><i class="far fa-calendar"></i>>March 14, 2018</a>
-												<a href="#"><i class="far fa-comment-alt" aria-hidden="true"></i>05</a>
-											</div>
-										</div>
-									</div>
-        						</div>
-        						<div class="col-lg-3 col-sm-6">
-        							<div class="choice_item small">
-										<img class="img-fluid" src="<?php bloginfo('template_directory'); ?>/img/blog/popular-post/pp-13.jpg" alt="">
-										<div class="choice_text">
-											<a href="news-details.html"><h4>Technical Support 10 with Dealing With</h4></a>
-											<div class="date">
-												<a href="#"><i class="far fa-calendar"></i>>March 14, 2018</a>
-												<a href="#"><i class="far fa-comment-alt" aria-hidden="true"></i>05</a>
-											</div>
-										</div>
-									</div>
-        						</div>
-        						<div class="col-lg-3 col-sm-6">
-        							<div class="choice_item small">
-										<img class="img-fluid" src="<?php bloginfo('template_directory'); ?>/img/blog/popular-post/pp-14.jpg" alt="">
-										<div class="choice_text">
-											<a href="news-details.html"><h4>Technical Support 10 with Dealing With</h4></a>
-											<div class="date">
-												<a href="#"><i class="far fa-calendar"></i>>March 14, 2018</a>
-												<a href="#"><i class="far fa-comment-alt" aria-hidden="true"></i>05</a>
-											</div>
 										</div>
 									</div>
         						</div>

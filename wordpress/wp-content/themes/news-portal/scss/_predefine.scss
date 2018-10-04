@@ -105,6 +105,10 @@ button:focus{
 	background: #f9f9ff;
 	border-left: 3px solid $baseColor;
 	margin-bottom: 30px;
+	padding-right: 7px;
+	
+	@include flexboxv2();
+	@include align-itemsv2(center);
 	h2{
 		color: $dip;
 		font-size: 18px; 
@@ -113,6 +117,11 @@ button:focus{
 		line-height: 40px;
 		padding-left: 15px;
 		margin-bottom: 0px;
+	}
+	.gad_btn{
+		margin-left: auto;
+		padding: 4px 10px;
+		line-height: normal;
 	}
 }
 
