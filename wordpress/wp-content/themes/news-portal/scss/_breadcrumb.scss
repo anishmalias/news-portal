@@ -8,31 +8,34 @@
 		position: relative;
 		background: url(../img/banner/home-banner.jpg) no-repeat scroll center center;
 		min-height: 600px;
-		.banner_content{
-			color: #fff;
-			max-width: 480px;
-			margin: auto;
-			.date{
-				margin-bottom: 25px;
-				a{
-					margin-right: 25px;
-					color: #fff;
-					i{
-						padding-right: 10px;
-					}
+		
+	}
+	.banner_content{
+		color: #fff;
+		margin: auto;
+		.date{
+			margin-bottom: 25px;
+			a{
+				margin-right: 25px;
+				color: #fff;
+				i{
+					padding-right: 10px;
 				}
 			}
-			p{
-				font-size: 14px;
-				font-family: $rob;
-				margin-bottom: 0px;
-			}
-			h3{
+		}
+		p{
+			font-size: 14px;
+			font-family: $rob;
+			margin-bottom: 0px;
+		}
+		h3{
+			color: #fff;
+			font-size: 36px;
+			font-weight: 700;
+			margin-bottom: 25px;
+
+			a{
 				color: #fff;
-				font-size: 36px;
-				font-weight: bold;
-				font-family: $rob;
-				margin-bottom: 25px;
 			}
 		}
 	}
@@ -157,6 +160,41 @@
 					}
 					&:hover{
 						color: $baseColor;
+					}
+				}
+			}
+		}
+	}
+}
+.home_banner_area{
+	background: #ccc url(../img/banner/home-banner.jpg) no-repeat scroll center center;
+	min-height: 0;
+
+	.lSSlideOuter{
+		.slider-item{
+			min-height: 570px; 
+
+			@include flexboxv2();
+			@include justify-contentv2(center);
+			@include align-itemsv2(center);
+		}
+		.lSPager {
+			position: absolute;
+			bottom: 30px;
+			left: 0px;
+			width: 100%;
+
+			li{
+				a{
+					width: 14px;
+					height: 14px;
+					background: rgba(249, 249, 255, 0.25);
+
+					@include transitionAll(background ease 0.2s);
+				}
+				&.active, &:hover{
+					a{
+						background: $baseColor;
 					}
 				}
 			}

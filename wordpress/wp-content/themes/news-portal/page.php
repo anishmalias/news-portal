@@ -18,7 +18,7 @@
             $args = array( 'post_type' => 'post', 'posts_per_page' => 10, 'paged' => $paged );
             $wp_query = new WP_Query($args);
             while ( have_posts() ) : the_post(); ?>
-            <div class="media">
+            <div class="media mb-5">
                 <div class="d-flex cp-l-latest__thumb">
                     <a href="<?php the_permalink(); ?>">
                         <?php if ( has_post_thumbnail($post->ID) ) {

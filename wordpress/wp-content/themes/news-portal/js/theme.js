@@ -195,8 +195,8 @@
                 margin: 30,
                 items: 2,
                 nav: false,
-                autoplay: false,
-                smartSpeed: 1500,
+                autoplay: true,
+                smartSpeed: 500,
                 dots:true, 
                 responsiveClass: true,
 //                responsive: {
@@ -491,5 +491,13 @@
     // enable bootstrap tooltip
     
     $('[data-toggle="tooltip"]').tooltip();
+
+    // Define home slider
+
+    $('.home-slider').lightSlider({
+        item:1,
+        auto: true,
+        controls: false
+    });
 
 })(jQuery)

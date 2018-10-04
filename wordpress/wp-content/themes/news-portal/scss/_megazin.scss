@@ -32,7 +32,7 @@
 		position: relative;
 		height: 190px;
 		overflow: hidden;
-		background: rgba($black, 0.03);
+		background: #efefef;
 
 		a{
 			position: absolute;
@@ -376,3 +376,12 @@
 }
 /* End Product List Area css
 ============================================================================================ */
+
+.siderbar-slider-image{
+	height: 95px;
+	overflow: hidden;
+
+	@include flexboxv2();
+	@include align-itemsv2(center);
+	@include justify-contentv2(center);
+}

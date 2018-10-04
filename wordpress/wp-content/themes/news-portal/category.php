@@ -16,8 +16,9 @@ if ( have_posts() ) : ?>
 <section class="choice_area p_100">
     <div class="container">
         <div class="row choice_inner">
+
         <?php
-            // The Loop
+            
             while ( have_posts() ) : the_post(); ?>
 
             <div class="col-lg-3 col-md-6">
@@ -71,5 +72,13 @@ if ( have_posts() ) : ?>
         </div>
     </div>
 </section> 
+<?php else: ?>
+<section class="choice_area p_100">
+    <div class="container">
+        <div class="alert alert-warning">
+            Sorry, no posts matched your criteria.
+        </div>
+    </div>
+</section>
 <?php endif; ?>
 <?php get_footer(); ?>

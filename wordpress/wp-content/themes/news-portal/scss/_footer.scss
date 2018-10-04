@@ -224,3 +224,16 @@
 		}
 	}
 }
+.single-footer-widget{
+	.date{
+		a{
+			i{
+				color: rgba($white, 0.42);
+			}
+		} 
+	} 
+	.f-media-width{
+		width: 100px;
+		@include flexv2(0,0,100px);
+	}
+}

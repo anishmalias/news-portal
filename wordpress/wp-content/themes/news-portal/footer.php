@@ -41,30 +41,50 @@
                             	<h3>Most Viewed News</h3>
                             </div>
                             <div class="m_news">
+                                <?php
+                                    $new_cat = new WP_Query( array(
+                                        'posts_per_page' => 2, 
+                                        'meta_key' => 'popular_posts', 
+                                        'orderby' => 'meta_value_num', 
+                                        'order' => 'ASC' 
+                                    ) );
+                                ?>
+                                <?php if ( $new_cat->have_posts() ) : ?>
+                                <?php while ( $new_cat->have_posts() ) : $new_cat->the_post(); ?>
                             	<div class="media">
-                            		<div class="d-flex">
-                            			<img src="<?php bloginfo('template_directory'); ?>/img/product/product-13.jpg" alt="">
+                            		<div class="d-flex f-media-width">
+                            			<a href="<?php the_permalink(); ?>">
+                                            <?php if ( has_post_thumbnail($post->ID) ) {
+                                                $thumb_id = get_post_thumbnail_id();
+                                                $thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true);                                
+                                            ?>
+                                            <img class="img-fluid" src="<?php echo $thumb_url[0]; ?>" alt="<?php the_title(); ?>" />
+
+                                            <?php } else { ?>
+                                                <img src="<?php bloginfo('template_directory'); ?>/img/default-image.png" alt="<?php the_title(); ?>" />
+                                            <?php } ?> 
+                                        </a>
                             		</div>
                             		<div class="media-body">
-                            			<a href="#"><h4>Converter Ipod Video Taking Portable Video Viewing To A Whole Level</h4></a>
+                            			<a href="<?php the_permalink(); ?>"><h4><?php the_title() ?></h4></a>
                             			<div class="date">
-											<a href="#"><i class="far fa-calendar"></i>March 14, 2018</a>
-											<a href="#"><i class="far fa-comment-alt" aria-hidden="true"></i>05</a>
+											<a href="#"><i class="far fa-calendar"></i><?php the_time('M j\<\s\u\p\>S\<\/\s\u\p\>, Y') ?></a>
+											<a href="#"><i class="far fa-comment-alt" aria-hidden="true"></i>
+                                                <?php
+                                                    if($post->comment_count > 0) { 
+                                                    echo $post->comment_count;
+                                                    }else if($post->comment_count == 0) {
+                                                        echo '0';
+                                                    } 
+                                                ?>
+                                            </a>
 										</div>
                             		</div>
                             	</div>
-                            	<div class="media">
-                            		<div class="d-flex">
-                            			<img src="<?php bloginfo('template_directory'); ?>/img/product/product-14.jpg" alt="">
-                            		</div>
-                            		<div class="media-body">
-                            			<a href="#"><h4>Sony Laptops Are Still Part Of The Sony Family</h4></a>
-                            			<div class="date">
-											<a href="#"><i class="far fa-calendar"></i>March 14, 2018</a>
-											<a href="#"><i class="far fa-comment-alt" aria-hidden="true"></i>05</a>
-										</div>
-                            		</div>
-                            	</div>
+                                <?php endwhile;?>
+                                <?php else: ?>
+                                <?php endif; ?>
+                            	
                             </div>
                         </div>
                     </div>	
@@ -103,7 +123,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         
         <script src="<?php echo get_bloginfo('template_directory'); ?>/js/jquery.ajaxchimp.min.js"></script>
         <script src="<?php echo get_bloginfo('template_directory'); ?>/js/mail-script.js"></script>
+        <script src="<?php echo get_bloginfo('template_directory'); ?>/js/lightslider.min.js"></script>
         <script src="<?php echo get_bloginfo('template_directory'); ?>/js/theme.js"></script>
-
+        
     </body>
 </html>
